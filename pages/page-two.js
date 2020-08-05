@@ -8,23 +8,23 @@ import Router from 'next/router';
 const StyledComp = styled(CompWithProp)`
   height: 400px;
   width: 400px;
-  border: 1px solid red;
+  border: 5px yellow solid;
 `;
 
-export default function Home() {
+export default function PageTwo() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>Page Two</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
         <StyledComp elementType="form">
           {/* Imperative routing fails */}
-          <button onClick={() => Router.push(("/page-two"))}>Imperative</button>
+          <button onClick={() => Router.push(("/"))}>Imperative</button>
           {/* Link works fine */}
-          {/* <Link href="/page-two">
+          {/* <Link href="/">
             <button>Link component</button>
           </Link> */}
         </StyledComp>
