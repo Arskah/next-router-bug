@@ -1,10 +1,9 @@
 import Head from 'next/head'
 import Link from "next/link";
 import styles from '../styles/Home.module.css'
-import { useRouter } from 'next/router';
+import Router from 'next/router';
 
 export default function PageTwo() {
-  const router = useRouter()
   return (
     <div className={styles.container}>
       <Head>
@@ -15,7 +14,7 @@ export default function PageTwo() {
       <main className={styles.main}>
         <form className={styles.myDiv2}>
           {/* Imperative routing fails onClick if type submit */}
-          <button onClick={() => router.push(("/page-three"))}>onClick</button>
+          <button onClick={() => Router.push(("/page-three"))}>onClick</button>
         </form>
       </main>
     </div>
