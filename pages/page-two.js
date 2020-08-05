@@ -1,15 +1,7 @@
 import Head from 'next/head'
 import Link from "next/link";
-import styled from "styled-components";
 import styles from '../styles/Home.module.css'
-import CompWithProp from "../components/CompWithProp";
 import { useRouter } from 'next/router';
-
-const StyledComp = styled(CompWithProp)`
-  height: 400px;
-  width: 400px;
-  border: 5px yellow solid;
-`;
 
 export default function PageTwo() {
   const router = useRouter()
@@ -21,14 +13,14 @@ export default function PageTwo() {
       </Head>
 
       <main className={styles.main}>
-        <StyledComp elementType="form">
+        <form className={styles.myDiv2}>
           {/* Imperative routing fails */}
           <button onClick={() => router.push(("/"))}>Imperative</button>
           {/* Link works fine */}
           {/* <Link href="/">
             <button>Link component</button>
           </Link> */}
-        </StyledComp>
+        </form>
       </main>
     </div>
   )

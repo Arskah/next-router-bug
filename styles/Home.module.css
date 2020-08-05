@@ -121,3 +121,15 @@
     flex-direction: column;
   }
 }
+
+.myDiv1 {
+  height: 400px;
+  width: 400px;
+  border: 1px solid red;
+}
+
+.myDiv2 {
+  height: 400px;
+  width: 400px;
+  border: 5px yellow solid;
+}
