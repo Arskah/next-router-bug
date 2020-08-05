@@ -13,13 +13,9 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <form className={styles.myDiv1}>
-          {/* Imperative routing fails */}
-          <button onClick={() => router.push(("/page-two"))}>Imperative</button>
-          {/* Link works fine */}
-          {/* <Link href="/page-two">
-            <button>Link component</button>
-          </Link> */}
+        <form className={styles.myDiv1} onSubmit={() => router.push(("/page-two"))}>
+          {/* Imperative routing fails on type submit */}
+          <button type="submit">onSubmit</button>
         </form>
       </main>
     </div>
